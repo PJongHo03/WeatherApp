@@ -35,7 +35,7 @@ function App() {
         params: { q: cityName },
       });
 
-      const data = res.dat;
+      const data = res.data;
       const weather = data.weather[0];
       const temperatureCelsius = parseFloat(data.main.temp - 273.15).toFixed(1);
       const imgUrl = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`;
