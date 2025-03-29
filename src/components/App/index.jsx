@@ -57,13 +57,8 @@ function App() {
   return (
     <main>
       <section>
-        <WeatherCard
-          temperature={weatherData.temperature}
-          location={weatherData.location}
-          description={weatherData.description}
-          icon={weatherData.icon}
-        ></WeatherCard>
         <SearchBar onSearch={handleSearch}></SearchBar>
+        <WeatherCard {...weatherData}></WeatherCard>
       </section>
     </main>
   );
