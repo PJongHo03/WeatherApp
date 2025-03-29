@@ -13,10 +13,6 @@ function App() {
     icon: null,
   });
 
-  const handleSearch = (cityName) => {
-    getApi(cityName);
-  };
-
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const baseUrl = "https://api.openweathermap.org/data/2.5";
 
@@ -28,6 +24,10 @@ function App() {
     },
   });
 
+  const handleSearch = (cityName) => {
+    getApi(cityName);
+  };
+
   const getApi = async (userInput) => {
     const cityName = cityMap[userInput] || userInput;
     try {
@@ -35,11 +35,15 @@ function App() {
         params: { q: cityName },
       });
 
-      const imgUrl = `http://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`;
+      const data = res.dat;
+      const weather = data.weather[0];
+      const temperatureCelsius = parseFloat(data.main.temp - 273.15).toFixed(1);
+      const imgUrl = `http://openweathermap.org/img/wn/${weather.icon}@2x.png`;
+
       setWeatherData({
-        temperature: parseFloat(res.data.main.temp - 273.15).toFixed(1),
-        location: res.data.name,
-        description: res.data.weather[0].description,
+        temperature: temperatureCelsius,
+        location: data.name,
+        description: weather.description,
         icon: imgUrl,
       });
       console.log(res);
