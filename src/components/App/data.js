@@ -1,4 +1,4 @@
-const cityMap = {
+export const cityMap = {
   서울: "Seoul",
   부산: "Busan",
   대구: "Daegu",
