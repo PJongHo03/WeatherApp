@@ -1,7 +1,7 @@
 import { useState } from "react";
 import "./style.css";
 
-function SearchBar({ onSearch }) {
+function SearchBar({ onSearch, children }) {
   const [inputValue, setInputValue] = useState("");
 
   const handleSubmit = (e) => {
@@ -21,6 +21,7 @@ function SearchBar({ onSearch }) {
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       ></input>
+      {children}
       <button className='weatherBtn' id='weatherBtn' onClick={handleSubmit}>
         날씨 조회
       </button>

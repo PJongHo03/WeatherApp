@@ -57,8 +57,9 @@ function App() {
   return (
     <main>
       <section>
-        <SearchBar onSearch={handleSearch}></SearchBar>
-        <WeatherCard {...weatherData}></WeatherCard>
+        <SearchBar onSearch={handleSearch}>
+          <WeatherCard {...weatherData}></WeatherCard>
+        </SearchBar>
       </section>
     </main>
   );
