@@ -16,6 +16,7 @@ function App() {
   const handleSearch = (cityName) => {
     getApi(cityName);
   };
+
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
   const baseUrl = "https://api.openweathermap.org/data/2.5";
 
@@ -51,8 +52,6 @@ function App() {
 
   return (
     <main>
-      <section>안녕</section>
-
       <section>
         <WeatherCard
           temperature={weatherData.temperature}
