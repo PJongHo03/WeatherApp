@@ -1,8 +1,13 @@
-function WeatherCard() {
+function WeatherCard({ temperature, location, description, icon }) {
   return (
-    <button class="btn" id="btn">
-      날씨 조회
-    </button>
+    <ul>
+      <li>기온 : {temperature}</li>
+      <li>위치 : {location}</li>
+      <li>설명 : {description}</li>
+      <li>
+        <img src={icon} />
+      </li>
+    </ul>
   );
 }
 
