@@ -31,7 +31,7 @@ function App() {
     const cityName = cityMap[userInput] || userInput;
     try {
       const res = await axiosInstance.get("/weather", {
-        params: { q: `${cityName},KR` },
+        params: { q: cityName },
       });
 
       const imgUrl = `http://openweathermap.org/img/wn/${res.data.weather[0].icon}@2x.png`;
