@@ -4,6 +4,7 @@
   font-size: 40px;
   background-color: #d9fef7;
   transition: background 0.1s ease-in-out;
+  margin-bottom: 20px;
   border-radius: 5px;
 }
 .weatherBtn:hover {
@@ -13,11 +14,13 @@
 .weatherForm {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .weatherSearch {
   width: 400px;
   height: 50px;
   font-size: 20px;
+  margin: 20px;
   border-radius: 5px;
 }

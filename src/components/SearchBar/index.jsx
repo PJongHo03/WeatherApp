@@ -14,10 +14,11 @@ function SearchBar({ onSearch, children }) {
 
   return (
     <section className='weatherForm'>
+      <h1 className='app-title'>🌦️ My Weather</h1>
       <input
         type='text'
         className='weatherSearch'
-        placeholder='검색'
+        placeholder='지역을 검색해 주세요'
         value={inputValue}
         onChange={(e) => setInputValue(e.target.value)}
       ></input>

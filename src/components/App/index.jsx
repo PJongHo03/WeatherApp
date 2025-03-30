@@ -46,6 +46,7 @@ function App() {
         description: weather.description,
         icon: imgUrl,
       });
+
       console.log(res);
     } catch (error) {
       console.log(error);

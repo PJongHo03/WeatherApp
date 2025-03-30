@@ -1,39 +1,15 @@
-ul {
+.weatherCardForm {
+  align-items: left;
   list-style-type: none;
-}
-
-body {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  height: 100vh;
-}
-
-.maindiv {
-  width: 600px;
-  height: 600px;
-  border: 1px solid black;
-  display: flex;
-  justify-content: center;
-}
-
-.ul {
-  text-align: center;
-}
-
-.listHeader {
-  align-items: center;
-  padding-top: 25px;
-}
-
-.li {
-  font-size: 40px;
   text-align: left;
-  margin-top: 27px;
+  justify-content: center;
+  font-size: 24px;
+  flex-direction: column;
+  padding-left: 0px;
 }
 
-.img {
-  width: 180px;
-  height: 170px;
+img {
+  width: 200px;
+  height: 200px;
 }
